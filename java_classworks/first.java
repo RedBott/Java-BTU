@@ -8,8 +8,8 @@ class Main {
     //forth();
     //fifth();
     //seventh();
-    //eightth();
-    ninth();
+    eightth();
+    //ninth();
   }
   public static void first(){
     String[] languages = {"C++","C#","Java","Pascal","PHP","Javascript","ActionScript"};
