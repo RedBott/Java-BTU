@@ -1,7 +1,14 @@
 package java_homeworks.homework2;
 import java.util.Scanner;
+interface TestInterface{
+    public void setValues();
+    public void getRange();
+    public void getDevisors();
+    public void getPrimeDevisors();
+    public String getMaxOccuringChar();
+}
 
-public class Third {
+public class Third implements TestInterface {
     int a;
     int b;
     public void setValues(){
