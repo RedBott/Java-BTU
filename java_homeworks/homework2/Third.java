@@ -8,6 +8,7 @@ public class Third {
         Scanner MyObj = new Scanner(System.in);
         a = MyObj.nextInt();
         b = MyObj.nextInt();
+        MyObj.close();
     }
     public void getRange(){
         for(int i=a;i<b;i++){
@@ -35,20 +36,27 @@ public class Third {
             }
         }
     }
-    public int getMostCommonChar(){
-        String str = String.valueOf(b);
-        int a[] = new int[10];
-        for(int i=1;i<str.length();i++){
-            if(str.charAt(i)==str.charAt(i-1)){
-                a[i]++;
-            }
-        }
-        max = 0
-        for(int i=0;i<a.length;i++){
-            if(a[i]>max){
-              max=a[i]
-            }
-        }
-        return max;
-    }
+    public String getMaxOccuringChar() 
+    { 
+        int count[] = new int[256]; 
+        String str = Integer.toString(b);
+        System.out.println("THIS: " + str);
+        int len = str.length(); 
+        for (int i=0; i<len; i++) 
+            count[str.charAt(i)]++; 
+       
+        int max = -1; 
+        char result = ' ';
+       
+        // Traversing through the string and maintaining 
+        // the count of each character 
+        for (int i = 0; i < len; i++) { 
+            if (max < count[str.charAt(i)]) { 
+                max = count[str.charAt(i)]; 
+                result = str.charAt(i); 
+            } 
+        } 
+        String res = String.valueOf(result);
+        return res; 
+    } 
 }
