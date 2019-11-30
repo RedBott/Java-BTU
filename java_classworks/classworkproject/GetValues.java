@@ -32,4 +32,5 @@ public class GetValues {
         return encap;
         //wrap fixed values into an array and return
     }
+
 }

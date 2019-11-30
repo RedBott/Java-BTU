@@ -1,7 +1,7 @@
 public class CheckValidation {
     public String checkFormat(String input){
         String[] valuesString = input.split("-",9);
-        for(int i=1;i<9;i++){
+        for(int i=1;i<6;i++){
             try{
                 Integer.valueOf(valuesString[i]);
             }
