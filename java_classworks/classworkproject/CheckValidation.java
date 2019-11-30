@@ -1,10 +1,10 @@
-package com.company;
-
 public class CheckValidation {
-    public static String checkFormat(String input){
+    public String checkFormat(String input){
         String[] valuesString = input.split("-",9);
         for(int i=1;i<9;i++){
-            try{int x = Integer.valueOf(valuesString[i]);}
+            try{
+                Integer.valueOf(valuesString[i]);
+            }
             catch (NumberFormatException e){
                 valuesString[i] = "5";
             }

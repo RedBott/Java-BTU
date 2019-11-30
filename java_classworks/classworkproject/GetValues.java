@@ -1,8 +1,5 @@
-package com.company;
-
 public class GetValues {
-    public static int[] getValues(String input){
-        int min,max;
+    public  int[] getValues(String input){
         String[] valuesString = input.split("-",10);
         //user input error will be solved before passing argument
         //min max alignment will be solved here
@@ -23,7 +20,7 @@ public class GetValues {
         }
         int wMin = Integer.valueOf(valuesString[7]);
         int wMax = Integer.valueOf(valuesString[8]);
-        if(pMin>pMax){
+        if(wMin>wMax){
             wMin = wMin + wMax;
             wMax = wMin - wMax;
             wMin = wMin - wMax;
@@ -33,5 +30,6 @@ public class GetValues {
         int[] encap = new int[6];
         encap[0] = pMin;encap[1] = pMax;encap[2] = sMin;encap[3] = sMax;encap[4] = wMin;encap[5] = wMax;
         return encap;
+        //wrap fixed values into an array and return
     }
 }
