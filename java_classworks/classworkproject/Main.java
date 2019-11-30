@@ -10,9 +10,7 @@ public class Main {
         // System.out.println("fixedd " + CV.checkFormat(input));
         int[] values = GV.getValues(CV.checkFormat(input));
         myObj.close();
-	
-	for(int i=0;i<values.length;i++){
-	    System.out.println("values " + values[i]);
-    }
+        Generator G = new Generator(values[1],values[0],values[3],values[2],values[5],values[4]);
+        System.out.println(G.generatePharagraph());
     }
 }
